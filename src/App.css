@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+
+}
+
+* {
+  background: #3b3b3b;
+  font-family: DuckDuckGoPrivacyEssentials
 }
 
 .App-logo {
@@ -34,5 +40,42 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Navbar */
+
+.navBar {
+  width: 100%;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+}
+
+.links {
+height: 0;
+overflow: hidden;
+list-style-type: none;
+font-weight: bold;
+}
+
+.show-nav {
+  height: 120px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  button {
+      display: none;
+  }
+
+  .links {
+      height: auto;
+      display: flex;
+  }
+
+  li {
+      padding: 0 15px;
   }
 }
