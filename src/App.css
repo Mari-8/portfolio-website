@@ -45,19 +45,38 @@
 
 /* Navbar */
 
-.navBar {
-  width: 100%;
-  background-color: #111;
-  height: 80px;
+.navbar {
   color: white;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.links {
-height: 0;
-overflow: hidden;
-list-style-type: none;
+div a:link {
+  color:white;
+}
+.nav-link:hover {
+  background-color: black;
+}
+
+.center {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: left; 
+  align-items: left;
+}
+
+.links a {
+color: white;
+font-size: 25px;
+text-decoration: none;
 font-weight: bold;
+margin-left: 25px;
+background-color: #111
 }
 
 .show-nav {
