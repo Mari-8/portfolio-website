@@ -4,7 +4,7 @@
 }
 
 * {
-  background: #3b3b3b;
+  background: #2e2e35;
   font-family: DuckDuckGoPrivacyEssentials
 }
 
@@ -53,7 +53,9 @@
 
 div a:link {
   color:white;
+  font-size: 25px;
 }
+
 .nav-link:hover {
   background-color: black;
 }
@@ -83,6 +85,49 @@ background-color: #111
   height: 120px;
 }
 
+.home-grid {
+   margin-left: 40px;
+}
+
+.card-button {
+  color: white;
+}
+
+.marg-left {
+  margin-left: 10px;
+}
+
+.link-social {
+  text-decoration: none;
+}
+
+.link-social:hover {
+  color: #05639e;
+}
+
+.name-dot {
+  color: #05639e; 
+}
+
+.dash {
+  width: 40px; 
+  height: 2px; 
+  background: #05639e;
+}
+
+.circle-image{
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 325px;
+  height: 325px;
+  margin-top: 50px;
+}
+.circle-image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
 
 
 @media screen and (min-width: 768px) {
