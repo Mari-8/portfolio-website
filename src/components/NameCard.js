@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -12,7 +12,8 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 const useStyles = makeStyles({
     root: {
       minWidth: 275,
-      marginTop: 150,
+      marginTop: 100,
+      marginLeft: 100,
       color: '#d9d9d9',
     },
     title: {
@@ -34,8 +35,8 @@ export default function NameCard() {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
-            <CardContent>
+        <div className={classes.root}>
+            <div>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                     <h1>
                         Ryan 
@@ -45,7 +46,7 @@ export default function NameCard() {
                     </h1>
                 </Typography>
                 <br/>
-                <div className="dash" /> 
+                <div className="dash-left" /> 
                 <br/> 
                 <div className={classes.content}>
                     <a href="google.com" className="link-social"><LinkedInIcon/></a> 
@@ -58,12 +59,12 @@ export default function NameCard() {
                 </div>
                 <br/>
                 <div>
-                    <Button variant="outlined" size="large" color="secondary">
+                    <Button color="blue" variant="outlined" size="large">
                         Contact Me
                     </Button>
                 </div>
-            </CardContent>
+            </div>
            
-        </Card>
+        </div>
     )
 }
