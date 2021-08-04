@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import Container from '@material-ui/core/Container';
-import ServicesChunk from '../components/ServicesChunk'
-import SkillLogos from '../components/SkillLogos'
+import Container from '@material-ui/core/Container'
+import PortfolioIntro from '../components/PortrolioIntro'
+import Projects from '../components/Projects'
 
 export default class ProjectsPage extends Component {
     render() {
         return (
-            <Container className="container-light" maxWidth="xl" disableGutters={true}>
-                <ServicesChunk /> 
-                <br /> <br /><br /> 
-                <SkillLogos />
+            <Container className="container-dark" maxWidth="xl" disableGutters={true}>
+                <PortfolioIntro />
+                <br /> <br /> <br /> 
+                <Projects /> 
+    
             </Container>
         )
     }
