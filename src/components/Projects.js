@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ImageGallery from 'react-image-gallery';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import ProjectButtons from './ProjectButtons'
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/ButtonGroup'
-
+import Button from '@material-ui/core/Button'
+import BookClubCard from './ProjectCards/BookClubCard'
+import ChandlerTrackCard from './ProjectCards/ChandlerTrackCard'
+import LifeRouteCard from './ProjectCards/LifeRouteCard'
+import { TextareaAutosize } from '@material-ui/core';
 
 const useStyles = makeStyles({
     card: {
@@ -19,32 +22,97 @@ const useStyles = makeStyles({
     },
     services: {
       color: '#05639e',
-      paddingTop: '150px',
+      paddingTop: '0px',
       fontSize: '25px'
+    },
+    button: {
+        color: 'white',
+        marginBottom: '10px'
     }
   });
 
-
+    
 export default function Projects() {
+
 
     const styles = useStyles()
 
-    const images = [
-        {
-          original: 'https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092243/Screen_Shot_2021-08-04_at_9.41.39_AM_zyrfsz.png',
-          thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092243/Screen_Shot_2021-08-04_at_9.41.39_AM_zyrfsz.png',
-        },
-        {
-          original: 'https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092882/Screen_Shot_2021-08-04_at_9.10.01_AM_hl2zox.png',
-          thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092882/Screen_Shot_2021-08-04_at_9.10.01_AM_hl2zox.png',
-        },
-        {
-          original: 'https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092887/Screen_Shot_2021-08-04_at_9.42.03_AM_bwvm3c.png',
-          thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092887/Screen_Shot_2021-08-04_at_9.42.03_AM_bwvm3c.png',
-        },
-      ];
+    const [imageGal, toggleGal] = useState(false)
+    const [galImages, setImages] = useState([])
 
-    return (
+    const bookclubImages = [
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092243/Screen_Shot_2021-08-04_at_9.41.39_AM_zyrfsz.png",
+            thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092243/Screen_Shot_2021-08-04_at_9.41.39_AM_zyrfsz.png',
+          },
+          {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092882/Screen_Shot_2021-08-04_at_9.10.01_AM_hl2zox.png",
+            thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092882/Screen_Shot_2021-08-04_at_9.10.01_AM_hl2zox.png',
+          },
+          {
+            original: 'https://res.cloudinary.com/kinsleybphoto/image/upload/v1628092887/Screen_Shot_2021-08-04_at_9.42.03_AM_bwvm3c.png',
+            thumbnail: 'https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628092887/Screen_Shot_2021-08-04_at_9.42.03_AM_bwvm3c.png',
+          }
+    ]
+
+    const chandlertrackImages = [
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628703726/Screen_Shot_2021-08-11_at_12.32.03_PM_nmflio.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628703726/Screen_Shot_2021-08-11_at_12.32.03_PM_nmflio.png"
+        }
+    ]
+
+    const liferouteImages = [
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628804376/Screen_Shot_2021-08-12_at_4.31.47_PM_kfcqzt.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628804376/Screen_Shot_2021-08-12_at_4.31.47_PM_kfcqzt.png"
+        },
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628804376/Screen_Shot_2021-08-12_at_4.38.08_PM_xiiz6o.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628804376/Screen_Shot_2021-08-12_at_4.38.08_PM_xiiz6o.png"
+        },
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628804376/Screen_Shot_2021-08-12_at_4.38.26_PM_foak9a.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628804376/Screen_Shot_2021-08-12_at_4.38.26_PM_foak9a.png"
+        },
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628804376/Screen_Shot_2021-08-12_at_4.38.34_PM_q0lrz0.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628804376/Screen_Shot_2021-08-12_at_4.38.34_PM_q0lrz0.png"
+        },
+        {
+            original: "https://res.cloudinary.com/kinsleybphoto/image/upload/v1628804376/Screen_Shot_2021-08-12_at_4.38.54_PM_giwtju.png",
+            thumbnail: "https://res.cloudinary.com/kinsleybphoto/image/upload/c_thumb,w_200,g_face/v1628804376/Screen_Shot_2021-08-12_at_4.38.54_PM_giwtju.png"
+        }
+    ]
+
+    const selectGallery = (name) => {
+        if (name === 'book-club') {
+            setImages(bookclubImages)
+            toggleGal(true)
+        } else if (name === 'chandler-track') {
+            setImages(chandlertrackImages)
+            toggleGal(true)
+        } else if (name === 'life-route') {
+            setImages(liferouteImages)
+            toggleGal(true)
+        }
+    } 
+
+    const removeGal = () => {
+        toggleGal(false)
+    }
+
+    if (imageGal) {
+        return (
+            <div className="gallery-cont">
+                <div className="images-gallery">
+                    <Button className={styles.button} size="medium" onClick={removeGal}>EXIT</Button>
+                    <ImageGallery items={galImages}/> 
+                </div>
+            </div>
+        )
+    } else {
+      return (
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -52,78 +120,18 @@ export default function Projects() {
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             
+        
             <div className="carousel-inner text-center">
                 <div className="carousel-item active">
-                <Card className={styles.card}>
-                        <br />
-                        <h1>Book Club</h1>
-                        <CardContent>
-                        <p>
-                            A personal application for tracking books, personalizing their categorization, and hosting/joining discussions. 
-                        </p>
-                        <ul className="no-bullet ">
-                            <li>Ruby on rails</li>
-                            <li>JSON Web Tokens</li>
-                            <li>Rails MVC patter</li>
-                            <li>SQL database</li>
-                            <li>OmniAuth middleware</li>
-                        </ul>
-                        </CardContent>
-                        <div>
-                            <button type="button" className="btn project-buttons">Code</button>
-                            <button type="button" className="btn project-buttons mx-3">Images</button>
-                            <button type="button" className="btn project-buttons disabled">Demo</button>
-                        </div>
-                        <br />
-                </Card>
+                    <BookClubCard selectGal={selectGallery} /> 
                 </div>
+
                 <div class="carousel-item">
-                    <Card className={styles.card}>
-                            <br />
-                            <h1>Book Club</h1>
-                            <CardContent>
-                            <p>
-                                A personal application for tracking books, personalizing their categorization, and hosting/joining discussions. 
-                            </p>
-                            <ul className="no-bullet ">
-                                <li>Ruby on rails</li>
-                                <li>JSON Web Tokens</li>
-                                <li>Rails MVC patter</li>
-                                <li>SQL database</li>
-                                <li>OmniAuth middleware</li>
-                            </ul>
-                            </CardContent>
-                            <div>
-                                <button type="button" className="btn project-buttons">Code</button>
-                                <button type="button" className="btn project-buttons mx-3">Images</button>
-                                <button type="button" className="btn project-buttons disabled">Demo</button>
-                            </div>
-                            <br />
-                    </Card>
+                    <ChandlerTrackCard selectGal={selectGallery} />
                 </div>
+
                 <div class="carousel-item">
-                    <Card className={styles.card}>
-                            <br />
-                            <h1>Book Club</h1>
-                            <CardContent>
-                            <p>
-                                A personal application for tracking books, personalizing their categorization, and hosting/joining discussions. 
-                            </p>
-                            <ul className="no-bullet ">
-                                <li>Ruby on rails</li>
-                                <li>JSON Web Tokens</li>
-                                <li>Rails MVC patter</li>
-                                <li>SQL database</li>
-                                <li>OmniAuth middleware</li>
-                            </ul>
-                            </CardContent>
-                            <div>
-                                <button type="button" className="btn project-buttons">Code</button>
-                                <button type="button" className="btn project-buttons mx-3">Images</button>
-                                <button type="button" className="btn project-buttons disabled">Demo</button>
-                            </div>
-                            <br />
-                    </Card>
+                    <LifeRouteCard selectGal={selectGallery} /> 
                 </div>
             </div>
 
@@ -136,5 +144,6 @@ export default function Projects() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-    )
+      )
+    }
 }
