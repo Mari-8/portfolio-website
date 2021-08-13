@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .App {
   text-align: center;
 
@@ -12,6 +14,7 @@
   height: 40vmin;
   pointer-events: none;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -81,8 +84,23 @@ margin-left: 25px;
 background-color: #111
 }
 
+.no-bullet {
+  list-style-type: none;
+  text-align: center;
+}
+
 .show-nav {
   height: 120px;
+}
+
+.project-buttons {
+  text-align: left;
+  width: 100px;
+  height: 50px;
+  background-color: #05639e;
+  color: #d9d9d9;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .home-grid {
@@ -152,8 +170,36 @@ background-color: #111
   background: #34343b;
 }
 
+.light-color {
+  color: #34343b;
+}
+
 .navbar {
   background-color: #2e2e35;
+}
+
+.image-grid {
+  width: 300px; 
+  height: 300px;
+}
+
+.gallery-cont {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.images-gallery {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  margin-left: 75px;
+}
+
+.gall-exit-button {
+  margin: 0 auto;
+  color: white; 
 }
 
 @media screen and (min-width: 768px) {
