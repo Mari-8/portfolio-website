@@ -25,7 +25,7 @@ export default function IntroCard() {
         <div className={classes.paddingTop}>
             <h1 className={classes.root}>Full-Stack Software Engineer</h1>
           
-            <p className={classes.paragraph}>I'm a Nashville developer proficient in Rails, React, Ruby, Redux, Javascript, and HTML/CSS.<br/>Lets create something amazing together.</p>
+            <p className={classes.paragraph}>I am a Nashville, TN developer proficient in Rails, React, Ruby, Redux, Javascript, and HTML/CSS.<br/>Lets create something amazing together.</p>
         </div>
     )
 }
