@@ -5,6 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiTwotonePhone } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
+import { FaGithub } from "react-icons/fa"
+import { GrInstagram } from "react-icons/gr"
 
 const useStyles = makeStyles({
   root: {
@@ -27,17 +29,8 @@ const useStyles = makeStyles({
       top: '15%',
       left: '20px',
       fontSize: '35px',
-      color: '#d9d9d9'
+      color: '#05639e'
   },
-  linkStyle: {
-    textDecoration: 'none',
-    position: 'relative',
-    top: '10%',
-    color: '#05639e',
-    '&:hover': {
-        
-      },
-  }
 });
 
 export default function ContactCards() {
@@ -55,19 +48,39 @@ export default function ContactCards() {
         <Grid item>
             <div className={classes.contactCard}>
                 <HiOutlineMail className={classes.iconStyle} /> 
-                <a href="google.com" className={classes.linkStyle}>ryanaltimari8@gmail.com</a>
+                <a href="mailto:ryanaltimari8@gmail.com" className="animating-link">ryanaltimari8@gmail.com</a>
             </div>
         </Grid>
         <Grid item>
             <div className={classes.contactCard}>
                 <AiTwotonePhone className={classes.iconStyle} /> 
-                <a href="google.com" className={classes.linkStyle}>931-993-4277</a>
+                <a href="tel:+19319934277" className="animating-link">931-993-4277</a>
             </div>
         </Grid>
         <Grid item>
             <div className={classes.contactCard}>
                 <SiLinkedin className={classes.iconStyle} /> 
-                <a href="google.com" className={classes.linkStyle}>/ryanaltimari</a>
+                <a href="https://www.linkedin.com/in/ryanaltimari/" className="animating-link">/ryanaltimari</a>
+            </div>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={4}
+      >
+        <Grid item>
+            <div className={classes.contactCard}>
+                <FaGithub className={classes.iconStyle} /> 
+                <a href="https://github.com/Mari-8" className="animating-link">/Mari-8</a>
+            </div>
+        </Grid>
+        <Grid item>
+            <div className={classes.contactCard}>
+                <GrInstagram className={classes.iconStyle} /> 
+                <a href="https://www.instagram.com/ryanaltimari/" className="animating-link">ryanaltimari</a>
             </div>
         </Grid>
       </Grid>
