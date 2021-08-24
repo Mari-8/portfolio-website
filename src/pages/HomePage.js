@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import NameCard from '../components/NameCard'
 import MainImage from '../components/MainImage'
 import IntroCard from '../components/IntroCard'
 
+
 export default class HomePage extends Component {
+
     render() {
         return (
-          <Container>
+          <Container className="container-dark" maxWidth="xl" disableGutters={true}>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
             <Grid 
                 container 
                 spacing={6}

@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 import BookClubCard from "./ProjectCards/BookClubCard";
 import ChandlerTrackCard from "./ProjectCards/ChandlerTrackCard";
 import LifeRouteCard from "./ProjectCards/LifeRouteCard";
-import { TextareaAutosize } from "@material-ui/core";
 
 const useStyles = makeStyles({
   card: {
