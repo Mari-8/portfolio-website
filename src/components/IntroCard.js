@@ -22,10 +22,12 @@ export default function IntroCard() {
     const classes = useStyles();
 
     return (
-        <div className={classes.paddingTop}>
-            <h1 className={classes.root}>Full-Stack Software Engineer</h1>
+        <div className="intro-div">
+            <div className={classes.paddingTop}>
+                <h1 className={classes.root}>Full-Stack Software Engineer</h1>
           
-            <p className={classes.paragraph}>I am a Nashville, TN developer proficient in Rails, React, Ruby, Redux, Javascript, and HTML/CSS.<br/>Lets create something amazing together.</p>
+                <p className={classes.paragraph}>I am a Nashville, TN developer ready to make a difference one line of code at a time.<br/>Lets create something amazing together.</p>
+            </div>
         </div>
     )
 }
