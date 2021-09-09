@@ -19,13 +19,15 @@ export default function PortrolioIntro() {
 
     return (
         <div className={classes.root}>
+            <div className="project-snippet">
                 <p className={classes.services}>Projects</p>
                 <h1>My Work</h1>
                 <p>
-                    I love making a veriety of projects, mostly partaining to things I love to do in life. <br/>
+                    I like making a veriety of projects, mostly partaining to things I love to do in life. <br/>
                     These are my favorites and what I am most proud of, the list will continue to grow quickly as I level up my programming skills<br/> and continue
-                    to branch into new technologies and create greater products for myself and others
+                    to branch into new technologies to create greater products for myself and others
                 </p>
+            </div>
         </div>
     )
 }

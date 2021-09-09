@@ -18,7 +18,7 @@ export default function ChandlerTrackCard(props) {
     const styles = useStyles()
 
     return (
-        <Card className={styles.card}>
+        <Card className={styles.card} id="card-cont">
             <br />
             <h1>ChandlerTrack</h1>
             <CardContent>
@@ -32,14 +32,13 @@ export default function ChandlerTrackCard(props) {
                 <li>Custom serializers</li>
             </ul>
             </CardContent>
-            <div>
+            <div className="gal-buttons">
               <a href="https://github.com/Mari-8/ChandlerTrack/tree/master">
                 <button type="button" className="btn project-buttons">Code</button>
               </a>
                 <button type="button" className="btn project-buttons mx-3" onClick={() => props.selectGal('chandler-track')}>Images</button>
                 <button type="button" className="btn project-buttons disabled">Demo</button>
             </div>
-            <br />
         </Card>
     )
 }

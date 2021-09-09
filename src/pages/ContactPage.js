@@ -6,7 +6,7 @@ import ContactCards from '../components/ContactCards'
 export default class ContactPage extends Component {
     render() {
         return (
-            <Container className="container-dark" maxWidth="xl" disableGutters={true}>
+            <Container id="contact" className="container-dark contact" maxWidth="xl" disableGutters={true}>
                 <ContactIntro />
                 <ContactCards /> 
             </Container>

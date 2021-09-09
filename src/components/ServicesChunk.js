@@ -12,6 +12,7 @@ const useStyles = makeStyles({
       paddingTop: '150px',
       fontSize: '25px'
     }
+    
   });
 
 
@@ -21,11 +22,13 @@ export default function ServicesChunk() {
 
     return (
         <div className={classes.root}>
+          <div className="services-hunk">
             <p className={classes.services}>Services</p>
             <h1>My Toolbelt</h1>
             <p>I am a Full-Stack software engineer constantly sharpening my craft with a goal to create<br/>
             Applications and software that solve problems and ultumitely make life easier for those using them.<br/> 
             Here are the tools I use to achieve this</p>
+          </div>
         </div>
     )
 }

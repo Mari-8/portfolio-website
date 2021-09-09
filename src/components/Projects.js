@@ -118,6 +118,7 @@ export default function Projects() {
 
   if (imageGal) {
     return (
+     <div className="images">
       <div className="gallery-cont">
         <div className="images-gallery">
           <Button className={styles.button} size="medium" onClick={removeGal}>
@@ -126,9 +127,11 @@ export default function Projects() {
           <ImageGallery items={galImages} />
         </div>
       </div>
+     </div>
     );
   } else {
     return (
+     <div className="images">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
@@ -195,7 +198,8 @@ export default function Projects() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> 
+     </div>
     );
   }
 }

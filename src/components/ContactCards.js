@@ -38,6 +38,7 @@ export default function ContactCards() {
 
   return (
     <Container className={classes.root}>
+     <div className="contact-cards">
       <Grid
         container
         direction="row"
@@ -84,6 +85,7 @@ export default function ContactCards() {
             </div>
         </Grid>
       </Grid>
+     </div>
     </Container>
   );
 }

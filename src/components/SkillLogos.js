@@ -16,11 +16,12 @@ const useStyles = makeStyles({
       
     },
     card: {
-    width: '125px',
-    height: '125px',
-    backgroundColor: '#2e2e35',
-    textAlign: 'center',
-    boxShadow: '0px 0px 35px 14px rgba(5,99,158,0.95)'
+        width: '125px',
+        height: '125px',
+        backgroundColor: '#2e2e35',
+        textAlign: 'center',
+        boxShadow: '0px 0px 35px 14px rgba(5,99,158,0.95)',
+        marginLeft: '50px',
     },
     background: {
         
@@ -42,64 +43,122 @@ export default function SkillLogos() {
     const classes = useStyles();
 
     return (
-        <div className="container">
-          <div className="row"> 
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent className="card-effect">
-                        <CodeIcon className={classes.icons}/> 
-                        <br /> 
-                        <p className={classes.text}>HTML/CSS</p>
+
+        <Grid container className="skill-cards">
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                         <CodeIcon className={classes.icons} id="icons"/> 
+                         <br /> 
+                         <p className={classes.text}>HTML/CSS</p>
                     </CardContent>
                 </Card>
-            </div>
-         
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <DiRuby className={classes.icons} /> 
+            </Grid>
+
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                        <DiRuby className={classes.icons} id="icons"/> 
                         <p className={classes.text}>Ruby</p>
                     </CardContent>
                 </Card>
-            </div>
+            </Grid>
 
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <SiRails className={classes.icons} /> 
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                        <SiRails className={classes.icons}  id="icons"/> 
                         <p className={classes.text}>Rails</p>
                     </CardContent>
                 </Card>
-            </div>
-          
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <IoLogoJavascript className={classes.icons} /> 
+            </Grid>
+            
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                        <IoLogoJavascript className={classes.icons}  id="icons"/> 
                         <p className={classes.text}>JavaScript</p> 
                     </CardContent>
                 </Card>
-            </div>
+            </Grid>
 
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <FaReact className={classes.icons} />
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                        <FaReact className={classes.icons}  id="icons"/>
                         <p className={classes.text}>React</p> 
                     </CardContent>
                 </Card>
-            </div>
+            </Grid>
 
-
-            <div className="col">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <SiRedux className={classes.icons} /> 
+            <Grid item xs={6} sm={6} md={2} className="skill-card-grid">
+                <Card className={classes.card} id="card">
+                    <CardContent className="card-cont">
+                        <SiRedux className={classes.icons} id="icons" /> 
                         <p className={classes.text}>Redux</p> 
                     </CardContent>
                 </Card>
-            </div>
-          </div>
-        </div>
+            </Grid>
+        </Grid>
+        
+        // <div className="container skill-cont">
+        //   <div className="row"> 
+        //     <div className="col top">
+        //         <Card className={classes.card}>
+        //             <CardContent className="card-effect">
+        //                 <CodeIcon className={classes.icons}/> 
+        //                 <br /> 
+        //                 <p className={classes.text}>HTML/CSS</p>
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+         
+        //     <div className="col top">
+        //         <Card className={classes.card}>
+        //             <CardContent>
+        //                 <DiRuby className={classes.icons} /> 
+        //                 <p className={classes.text}>Ruby</p>
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+
+        //     <div className="col top">
+        //         <Card className={classes.card}>
+        //             <CardContent>
+        //                 <SiRails className={classes.icons} /> 
+        //                 <p className={classes.text}>Rails</p>
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+          
+        //     <div className="col">
+        //         <Card className={classes.card}>
+        //             <CardContent>
+        //                 <IoLogoJavascript className={classes.icons} /> 
+        //                 <p className={classes.text}>JavaScript</p> 
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+
+        //     <div className="col">
+        //         <Card className={classes.card}>
+        //             <CardContent>
+        //                 <FaReact className={classes.icons} />
+        //                 <p className={classes.text}>React</p> 
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+
+
+        //     <div className="col">
+        //         <Card className={classes.card}>
+        //             <CardContent>
+        //                 <SiRedux className={classes.icons} /> 
+        //                 <p className={classes.text}>Redux</p> 
+        //             </CardContent>
+        //         </Card>
+        //     </div>
+        //   </div>
+        //</div>
     )
 }

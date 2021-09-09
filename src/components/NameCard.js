@@ -35,7 +35,7 @@ export default function NameCard() {
 
   return (
     <div className={classes.root}>
-      <div>
+      <div className="name-card">
         <Typography
           className={classes.title}
           color="textSecondary"
@@ -52,28 +52,23 @@ export default function NameCard() {
         <div className="dash-left" />
         <br />
         <div className={classes.content}>
-          <a href="google.com" className="link-social">
+          <a href="https://www.linkedin.com/in/ryanaltimari/" className="link-social">
             <LinkedInIcon />
           </a>
 
-          <a href="google.com" className="link-social">
+          <a href="https://github.com/Mari-8" className="link-social">
             <GitHubIcon className="marg-left" />
           </a>
 
-          <a href="google.com" className="link-social">
+          <a href="https://www.instagram.com/ryanaltimari/" className="link-social">
             <InstagramIcon className="marg-left" />
           </a>
 
-          <a href="google.com" className="link-social">
+          <a href="https://ryanangelo8.medium.com/ " className="link-social">
             <MenuBookIcon className="marg-left" />
           </a>
         </div>
         <br />
-        <div>
-          <Button color="blue" variant="outlined" size="large">
-            Contact Me
-          </Button>
-        </div>
       </div>
     </div>
   );

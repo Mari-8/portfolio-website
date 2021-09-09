@@ -18,7 +18,7 @@ export default function BookClubCard(props) {
     const styles = useStyles()
 
     return (
-        <Card className={styles.card}>
+        <Card className={styles.card} id="card-cont">
             <br />
             <h1>Book Club</h1>
             <CardContent>
@@ -33,7 +33,7 @@ export default function BookClubCard(props) {
                 <li>OmniAuth middleware</li>
             </ul>
             </CardContent>
-            <div>
+            <div className="gal-buttons">
               <a href="https://github.com/Mari-8/BookClub/tree/master">
                 <button type="button" className="btn project-buttons">Code</button>
               </a>

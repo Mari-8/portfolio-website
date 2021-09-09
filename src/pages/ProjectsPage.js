@@ -6,7 +6,7 @@ import Projects from '../components/Projects'
 export default class ProjectsPage extends Component {
     render() {
         return (
-            <Container className="container-dark" maxWidth="xl" disableGutters={true}>
+            <Container id="projects" className="container-dark" maxWidth="xl" disableGutters={true}>
                 <PortfolioIntro />
                 <br /> <br /> <br /> 
                 <Projects /> 

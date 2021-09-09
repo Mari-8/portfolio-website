@@ -5,30 +5,23 @@ import NameCard from '../components/NameCard'
 import MainImage from '../components/MainImage'
 import IntroCard from '../components/IntroCard'
 
-
 export default class HomePage extends Component {
 
     render() {
+        // maxWidth="xl" disableGutters={true}
         return (
-          <Container className="container-dark" maxWidth="xl" disableGutters={true}>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+          <Container id="home" className="container-dark home-page" disableGutters={true} maxWidth="xl">
             <Grid 
-                container 
-                spacing={6}
-                direction="row"
-                justifyContent="space-around"
-                alignItems="center"
+                container
             >
-                <Grid item xs>
+                <Grid item xs={12} sm={12} md={4}>
                     <NameCard /> 
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12} sm={12} md={4}>
                     <MainImage /> 
                 </Grid>
-                <Grid item xs>
+                    
+                <Grid item xs={12} sm={12} md={4}>
                     <IntroCard /> 
                 </Grid>
             </Grid>

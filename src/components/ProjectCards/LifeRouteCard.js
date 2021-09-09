@@ -18,7 +18,7 @@ export default function LifeRouteCard(props) {
     const styles = useStyles()
 
     return (
-        <Card className={styles.card}>
+        <Card className={styles.card} id="card-cont">
             <br />
             <h1>Life Route</h1>
             <CardContent>
@@ -33,7 +33,7 @@ export default function LifeRouteCard(props) {
                 <li>Custom validators</li>
             </ul>
             </CardContent>
-            <div>
+            <div className="gal-buttons">
               <a href="https://github.com/Mari-8/Life-Route">
                 <button type="button" className="btn project-buttons">Code</button>
               </a>
